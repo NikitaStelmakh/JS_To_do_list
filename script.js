@@ -54,13 +54,49 @@ document.getElementById("task_form").addEventListener("submit", function (evt) {
      skippedCounter();
      li.remove();
      updateCounters();
-});
+  });
+
+  document.addEventListener("change", ()=> {
+  if(checkbox.checked) {
+    li.classList.add("completed_style"); 
+  } else {
+    li.classList.remove("completed_style")
+  };
+}) 
 });
 
 
-document.getElementById("task_list").addEventListener("change", function(evt) {
-   if(evt.target.type === "checkbox") {
-  updateCounters ();  
+document.getElementById("task_list").addEventListener("change", (evt) => {
+   if(evt.target.type === "checkbox") { 
+     updateCounters ();  
    }
 });
+
+const filter = document.getElementById("filter");
+
+filter.addEventListener("change", ()=> {
+  const tasks = document.querySelectorAll("#task_list li");
+  tasks.forEach(task => {
+  switch(filter.value) {
+    case "all": 
+    task.style.display = "flex";
+    break;
+
+    case "completed":
+    task.style.display =
+    task.classList.contains("completed_style")
+      ? "flex"
+      : "none";
+    break;
+
+    case "in_progress":
+    task.style.display =
+    task.classList.contains("completed_style")
+      ? "none"
+      : "flex";
+    break;
+  }
+  })
+})
+
 

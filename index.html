@@ -9,10 +9,17 @@
         <main id="main_section">
             <section id="add_section">
                 <h1>Список задач</h1>
-                <form id="task_form">
-                  <input type="text" id="task" placeholder="Новая задача">
-                  <button type="submit" class="btn" id="add_btn">➕</button>
-                </form>
+                <div id="nav_block">
+                    <form id="task_form">
+                      <input type="text" id="task" placeholder="Новая задача">
+                      <button type="submit" class="btn" id="add_btn">➕</button>
+                    </form>
+                    <select id="filter">
+                       <option value="all">все</option>
+                       <option value="completed">выполненные</option>
+                       <option value="in_progress">невыполненные</option>
+                    </select>
+                </div>
             </section>
             <section id="task_section">
                 <div id="task_block">

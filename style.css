@@ -1,14 +1,17 @@
 body {
-      font-family: "century gothic", "sans-serif";
-      text-align: center;
-      min-height: 100vh;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      transition: all 0.9s ease;
+    margin: 0px;
+    padding: 0px;
 
-      background: linear-gradient(45deg, rgb(154, 165, 188), rgb(147, 192, 226));
-      color: rgb(255, 255, 255);
+    font-family: "century gothic", "sans-serif";
+    text-align: center;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all 0.9s ease;
+
+    background: linear-gradient(45deg, rgb(154, 165, 188), rgb(147, 192, 226));
+    color: rgb(255, 255, 255);
 }
 
 #main_section {
@@ -46,7 +49,7 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 45px;
     color: rgb(255, 255, 255);
 }
 
@@ -55,7 +58,7 @@ span {
 }
 
 .stat_label {
-    color: rgb(225, 136, 255);
+    color: rgb(255, 255, 255);
 }
 
 .stat {
@@ -97,6 +100,8 @@ span {
     max-height: 450px;
     background-color: rgb(255, 255, 255);
     border-radius: 0px;
+    padding: 0px;
+
 }
 
 #task_form {
@@ -112,15 +117,16 @@ span {
     align-items: center;
     box-sizing: border-box;
 
-     border: none;
-     outline: none;
+    border: none;
+    outline: none;
 
 
     background: rgb(154, 255, 143);
     height: 40px;
     width: 40px;
 
-    height: 40px
+    height: 40px;
+    cursor: pointer;
 }
 
 #task {
@@ -128,10 +134,10 @@ span {
     background: rgb(255, 255, 255);
     box-sizing: border-box;
 
-     border: none;
-     outline: none;
-     border: 1px solid #ddd;
-     padding: 0 10px;
+    border: none;
+    outline: none;
+    border: 1px solid #ddd;
+    padding: 0 10px;
 
 
     height: 40px;
@@ -144,6 +150,12 @@ span {
     flex-direction: column;
     align-items: stretch;
     max-height: 450px;
+
+    padding: 1px;
+    margin: 0px;
+
+    overflow-y: auto;
+
 }
 
 li {
@@ -152,10 +164,10 @@ li {
     align-items: center;
     justify-content: space-between;
     background-color:  rgb(44, 47, 54);
-    min-height: 40px;
-    max-height: 430px;
-    min-width: 500px;
-    margin: 1px 10px;
+    min-height: 50px;
+    max-height: 50px;
+    width: 100%;
+    margin: 1px 0px;
     padding: 10px 10px;
 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
@@ -168,5 +180,29 @@ li {
     min-width: 30px;
     min-height: 30px;
     background-color: transparent;
-    border: 3px solid rgb(255, 0, 123)
+    border: 3px solid rgb(255, 0, 123);
+    cursor: pointer;
+}
+
+.completed_style {
+    background: linear-gradient(45deg, rgb(44, 47, 54), rgb(154, 255, 143));
+    text-decoration: line-through;
+}
+
+#nav_block {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#filter {
+    height: 40px;
+    cursor: pointer;
+
+    padding: 0 10px;
+
+    border: none;
+    outline: none;
+    background-color: rgb(154, 165, 188);
 }

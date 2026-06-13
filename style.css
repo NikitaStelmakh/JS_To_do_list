@@ -2,9 +2,11 @@ body {
     margin: 0px;
     padding: 0px;
 
-    font-family: "century gothic", "sans-serif";
+    font-family: DejaVu Sans Mono, monospace;
+
     text-align: center;
-    min-height: 100vh;
+    min-height: 100%;
+    max-height: 100vh;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -19,11 +21,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
 
-    margin: 15px 200px;
+    margin: 15px;
+    margin-left: 10%;
+    margin-right: 10%;
     padding: 10px;
 
     text-align: center;
-    min-height: 600px;
+    min-height: 90%;
+    max-height: 900px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -49,6 +54,9 @@ body {
 }
 
 h1 {
+    font-family: Impact, fantasy;
+    font-weight: lighter;
+    font-style: italic;
     font-size: 45px;
     color: rgb(255, 255, 255);
 }
@@ -65,8 +73,8 @@ span {
     display: flex;
     flex-direction: row;
     margin-top: auto;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 1%;
+    margin-left: 1%;
     gap: 20px;
 
     justify-content: space-between;
@@ -77,8 +85,8 @@ span {
     display: flex;
     flex-direction: row;
     margin-top: auto;
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 2%;
+    margin-left: 2%;
 
     justify-content: space-between;
     align-items: flex-end;
@@ -95,8 +103,8 @@ span {
 }
 
 #task_block {
-    margin:20px 20px 20px 20px;
-    min-height: 450px;
+    margin:2% 2% 2% 2%;
+    min-height: 60vh;
     max-height: 450px;
     background-color: rgb(255, 255, 255);
     border-radius: 0px;
@@ -122,10 +130,9 @@ span {
 
 
     background: rgb(154, 255, 143);
-    height: 40px;
-    width: 40px;
+    height: 6vh;
+    width: 6vh;
 
-    height: 40px;
     cursor: pointer;
 }
 
@@ -137,11 +144,11 @@ span {
     border: none;
     outline: none;
     border: 1px solid #ddd;
-    padding: 0 10px;
+    padding: 0 1%;
 
 
-    height: 40px;
-    width: 500px
+    height: 6vh;
+    width: 50vh;
 
 }
 
@@ -164,11 +171,11 @@ li {
     align-items: center;
     justify-content: space-between;
     background-color:  rgb(44, 47, 54);
-    min-height: 50px;
+    min-height: 7vh;
     max-height: 50px;
     width: 100%;
     margin: 1px 0px;
-    padding: 10px 10px;
+    padding: 0px 0px;
 
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
 
@@ -177,17 +184,26 @@ li {
 }
 
 .delete_btn {
-    min-width: 30px;
-    min-height: 30px;
-    background-color: transparent;
-    border: 3px solid rgb(255, 0, 123);
+    display: flex;
+    margin: 0;
+
+    width: 7vh;
+    height: 7vh;
+    background-color: rgb(254, 155, 143);
+    
+
+    border: none;
+    outline: none;
     cursor: pointer;
 }
 
 .completed_style {
+    transition: all ease 0.5s;
+
     background: linear-gradient(45deg, rgb(44, 47, 54), rgb(154, 255, 143));
     text-decoration: line-through;
 }
+
 
 #nav_block {
     display: flex;
@@ -197,12 +213,34 @@ li {
 }
 
 #filter {
-    height: 40px;
+    height: 6vh;
     cursor: pointer;
 
-    padding: 0 10px;
+    padding: 0 1%;
 
     border: none;
     outline: none;
     background-color: rgb(154, 165, 188);
 }
+
+.btn:hover {
+    transition: all ease 0.5s;
+
+    background: rgb(123, 255, 109);
+    box-shadow: 0 0 10px rgb(123, 255, 109);
+}
+
+.delete_btn:hover {
+    transition: all ease 0.5s;
+
+    box-shadow: 0 0 10px rgb(255, 131, 117);
+    background: rgb(255, 131, 117);
+}  
+
+#filter:hover {
+    transition: all ease 0.5s;
+
+    background: rgb(190, 204, 235);
+    box-shadow: 0 0 10px rgb(190, 204, 235);
+}
+
